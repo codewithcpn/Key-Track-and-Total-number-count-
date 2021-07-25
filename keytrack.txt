@@ -1,0 +1,15 @@
+input_string = input("Enter String: ")
+
+input_string = input_string.casefold()
+
+vowels = "abcdefghihklmnopqrstvwxyz-+*//.,';{)(}|!`/?=_-^%$#@~123456789"
+
+vowelsdata = {}.fromkeys(vowels,0)
+
+for character in input_string:
+     if character in vowels:
+         vowelsdata[character] += 1
+          
+
+for vowel in vowelsdata:
+   print(vowel, "=>", vowelsdata[vowel])
